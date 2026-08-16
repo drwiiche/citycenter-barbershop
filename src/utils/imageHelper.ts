@@ -4,7 +4,7 @@ import type React from 'react';
 
 const CDN_BASE_MAP: Record<string, string> = {
   'logo-2.webp': 'https://citycenterbarbershop.nl/wp-content/uploads/2026/05/logo-2.webp',
-  'cropped-fav-icon.png': 'https://citycenterbarbershop.nl/wp-content/uploads/2026/02/cropped-fav-icon.png',
+  'cropped-fav-icon.png': 'https://citycenterbarbershop.nl/wp-content/uploads/2026/05/logo-2.webp',
   'herenkapper-ervaring-amsterdam-centrum.webp': 'https://citycenterbarbershop.nl/wp-content/uploads/2026/07/herenkapper-ervaring-amsterdam-centrum.webp',
   'herenkapper-aan-het-werk-amsterdam.webp': 'https://citycenterbarbershop.nl/wp-content/uploads/2026/07/herenkapper-aan-het-werk-amsterdam.webp',
   'trendy-herenkapsel-burst-fade-amsterdam.webp': 'https://citycenterbarbershop.nl/wp-content/uploads/2026/07/trendy-herenkapsel-burst-fade-amsterdam.webp',
