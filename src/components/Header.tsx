@@ -108,24 +108,14 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBookingModal, onOpenServic
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           
-          {/* Brand Logo & Name */}
-          <a href="#" className="flex items-center gap-3 group" id="nav-brand-logo">
-            <div className="h-11 w-auto max-w-[140px] flex items-center justify-center">
-              <img 
-                src={getSafeImageUrl("logo-2.webp")} 
-                alt="City Center Barbershop Amsterdam" 
-                className="h-10 w-auto object-contain brightness-110 drop-shadow-[0_2px_10px_rgba(218,165,32,0.3)]"
-                onError={(e) => handleImageFallback(e)}
-              />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-brand text-sm sm:text-base font-bold tracking-[0.16em] text-white uppercase leading-none">
-                CITY CENTER
-              </span>
-              <span className="text-[9px] sm:text-[9.5px] tracking-[0.22em] text-[#DAA520] uppercase font-semibold mt-1">
-                BARBERSHOP & SALON
-              </span>
-            </div>
+          {/* Brand Logo */}
+          <a href="#" className="flex items-center group py-1" id="nav-brand-logo" aria-label="City Center Barbershop & Salon">
+            <img 
+              src={getSafeImageUrl("logo-2.webp")} 
+              alt="City Center Barbershop & Salon Amsterdam" 
+              className="h-10 sm:h-12 w-auto object-contain brightness-110 drop-shadow-[0_2px_12px_rgba(218,165,32,0.25)] transition-transform duration-300 group-hover:scale-105"
+              onError={(e) => handleImageFallback(e)}
+            />
           </a>
 
           {/* Desktop Nav Links */}

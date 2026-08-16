@@ -25,23 +25,13 @@ export const Footer: React.FC = () => {
           
           {/* Col 1: Logo, Bio, Social Icons */}
           <div className="space-y-4">
-            <a href="#" className="flex items-center gap-2.5 group">
-              <div className="h-9 w-auto max-w-[120px] flex items-center justify-center">
-                <img 
-                  src={getSafeImageUrl("logo-2.webp")} 
-                  alt="City Center Barbershop Amsterdam" 
-                  className="h-8 w-auto object-contain brightness-110"
-                  onError={(e) => handleImageFallback(e)}
-                />
-              </div>
-              <div className="flex flex-col">
-                <span className="font-brand text-sm font-bold tracking-[0.16em] text-white uppercase leading-none">
-                  CITY CENTER
-                </span>
-                <span className="text-[8.5px] tracking-[0.22em] text-[#DAA520] uppercase font-semibold mt-0.5">
-                  BARBERSHOP & SALON
-                </span>
-              </div>
+            <a href="#" className="flex items-center group py-1" aria-label="City Center Barbershop & Salon">
+              <img 
+                src={getSafeImageUrl("logo-2.webp")} 
+                alt="City Center Barbershop & Salon Amsterdam" 
+                className="h-9 sm:h-10 w-auto object-contain brightness-110"
+                onError={(e) => handleImageFallback(e)}
+              />
             </a>
 
             <p className="text-neutral-400 text-xs leading-relaxed font-normal">
