@@ -57,11 +57,20 @@ export function getSafeImageUrl(src: string): string {
 
 export function handleImageFallback(e: React.SyntheticEvent<HTMLImageElement, Event>, customFallback?: string) {
   const target = e.currentTarget;
-  const currentSrc = target.src;
+  if (!target) return;
+
+  // Prevent infinite error cycles in Firefox / strict browsers
+  if (target.dataset.hasFailed) {
+    target.onerror = null;
+    return;
+  }
+  target.dataset.hasFailed = 'true';
+
+  const currentSrc = target.src || '';
   const filename = currentSrc.split('/').pop()?.split('?')[0] || '';
 
   // If failed on local path, try remote CDN
-  if (CDN_BASE_MAP[filename] && !currentSrc.startsWith('https://citycenterbarbershop.nl')) {
+  if (CDN_BASE_MAP[filename] && !currentSrc.startsWith('https://citycenterbarbershop.nl') && !currentSrc.includes('images.fresha.com')) {
     target.src = CDN_BASE_MAP[filename];
     return;
   }

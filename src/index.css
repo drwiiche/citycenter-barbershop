@@ -41,7 +41,15 @@
 .gold-gradient-text {
   background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #C59B27 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: #DAA520;
+}
+
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+  .gold-gradient-text {
+    color: transparent;
+  }
 }
 
 /* Custom glow and animations */

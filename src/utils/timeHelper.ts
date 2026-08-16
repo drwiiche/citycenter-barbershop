@@ -5,20 +5,36 @@ export function getShopStatus(): {
   badgeColor: string;
 } {
   try {
-    // Format to Amsterdam time
     const now = new Date();
-    const amsterdamTimeStr = now.toLocaleString("en-US", { timeZone: "Europe/Amsterdam" });
-    const amsterdamDate = new Date(amsterdamTimeStr);
-    const dayOfWeek = amsterdamDate.getDay(); // 0 is Sunday, 1 is Monday ... 6 is Saturday
-    const hours = amsterdamDate.getHours();
-    const minutes = amsterdamDate.getMinutes();
+    // Use standard Intl.DateTimeFormat parts for robust cross-browser timezone resolution
+    const formatter = new Intl.DateTimeFormat('en-US', {
+      timeZone: 'Europe/Amsterdam',
+      hour12: false,
+      weekday: 'short',
+      hour: 'numeric',
+      minute: 'numeric'
+    });
+
+    const parts = formatter.formatToParts(now);
+    let weekdayStr = '';
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+
+    for (const part of parts) {
+      if (part.type === 'weekday') weekdayStr = part.value;
+      if (part.type === 'hour') hours = parseInt(part.value, 10);
+      if (part.type === 'minute') minutes = parseInt(part.value, 10);
+    }
+
+    const isSunday = weekdayStr.toLowerCase().startsWith('sun');
+    const isSaturday = weekdayStr.toLowerCase().startsWith('sat');
     const currentTimeMinutes = hours * 60 + minutes;
 
     let openMinutes = 9 * 60; // 09:00
     let closeMinutes = 20 * 60; // 20:00
     let closeTimeStr = "20:00";
 
-    if (dayOfWeek === 0) { // Sunday
+    if (isSunday) {
       openMinutes = 10 * 60;
       closeMinutes = 18 * 60;
       closeTimeStr = "18:00";
@@ -41,7 +57,7 @@ export function getShopStatus(): {
         badgeColor: "bg-emerald-500/20 text-emerald-300 border-emerald-500/40"
       };
     } else {
-      const nextOpenStr = dayOfWeek === 6 ? "Tomorrow at 10:00" : "Tomorrow at 09:00";
+      const nextOpenStr = isSaturday ? "Tomorrow at 10:00" : "Tomorrow at 09:00";
       return {
         isOpen: false,
         statusText: "Closed Now",
