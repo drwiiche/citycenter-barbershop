@@ -69,7 +69,7 @@ export default function App() {
         <BarbersSection onBookBarber={(name) => handleOpenBooking(`Haircut with ${name}`)} />
 
         {/* 8. Recent Cuts & Styles Gallery */}
-        <GallerySection />
+        <GallerySection onOpenBookingModal={() => handleOpenBooking()} />
 
         {/* 9. Frequently Asked Questions (Local SEO & SERP FAQ Accordion) */}
         <FaqSection onOpenBookingModal={() => handleOpenBooking()} />

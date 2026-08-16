@@ -198,25 +198,25 @@ export const MASTER_BARBERS: BarberItem[] = [
   {
     id: 'barber-1',
     name: 'Ali & Team',
-    title: 'Head Barber & Salon Director',
+    title: 'Head Barber & Master Stylist',
     experience: '12+ Years Exp.',
-    image: getSafeImageUrl('barber-3.webp'),
+    image: getSafeImageUrl('fresha-image-14.jpeg'),
     specialty: 'Skin Fades, Scissor Craft & Beard Sculpting'
   },
   {
     id: 'barber-2',
-    name: 'Artisan Craftsman',
-    title: 'Senior Master Barber',
+    name: 'Master Barber',
+    title: 'Senior Artisan Barber',
     experience: '9+ Years Exp.',
-    image: getSafeImageUrl('herenkapper-aan-het-werk-amsterdam.webp'),
+    image: getSafeImageUrl('fresha-image-15.jpeg'),
     specialty: 'Hot Razor Shaves & Modern Tapers'
   },
   {
     id: 'barber-3',
-    name: 'Fade & Styling Specialist',
+    name: 'Fade Specialist',
     title: 'Hair & Salon Specialist',
     experience: '8+ Years Exp.',
-    image: getSafeImageUrl('heren-fade-knippen-zijaanzicht-amsterdam.webp'),
+    image: getSafeImageUrl('fresha-image-16.jpeg'),
     specialty: 'Burst Fades, Keratin & Curly Hair Design'
   }
 ];
