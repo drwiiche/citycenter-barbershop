@@ -1,0 +1,6 @@
+{
+  "name": "City Center Barbershop & Hair Salon",
+  "description": "High-converting single-page website for City Center Barbershop & Hair Salon near Amsterdam Centraal Station with instant booking, click-to-call, WhatsApp, service menu, and 4.9★ reviews.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

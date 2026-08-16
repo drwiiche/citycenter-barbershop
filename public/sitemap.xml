@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://citycenterbarbershop.nl/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://citycenterbarbershop.nl/" />
+    <xhtml:link rel="alternate" hreflang="nl-NL" href="https://citycenterbarbershop.nl/nl/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://citycenterbarbershop.nl/" />
+    <image:image>
+      <image:loc>https://citycenterbarbershop.nl/images/herenkapper-ervaring-amsterdam-centrum.webp</image:loc>
+      <image:title>City Center Barbershop Amsterdam - Precision Haircuts and Grooming</image:title>
+      <image:caption>Top-rated barbershop at Amsterdam Central Station IJpassage</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://citycenterbarbershop.nl/images/logo-2.webp</image:loc>
+      <image:title>City Center Barbershop &amp; Hair Salon Official Logo</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://citycenterbarbershop.nl/#services</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://citycenterbarbershop.nl/#about</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://citycenterbarbershop.nl/#reviews</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://citycenterbarbershop.nl/#barbers</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://citycenterbarbershop.nl/#gallery</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://citycenterbarbershop.nl/#location</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+</urlset>
