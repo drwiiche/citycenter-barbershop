@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Play, Calendar, Users, Scissors, Star, X } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/barbershopData';
+import { getSafeImageUrl, handleImageFallback } from '../utils/imageHelper';
 
 interface AboutSectionProps {
   onOpenBookingModal?: () => void;
@@ -22,10 +23,11 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenBookingModal }
             <div className="lg:col-span-6 relative">
               <div className="relative rounded-2xl overflow-hidden border border-[#262B35] group shadow-xl">
                 <img
-                  src="/images/herenkapper-aan-het-werk-amsterdam.webp"
+                  src={getSafeImageUrl("herenkapper-aan-het-werk-amsterdam.webp")}
                   alt="City Center Barbershop Amsterdam - Master Barbers at Work"
                   className="w-full h-80 sm:h-96 lg:h-[420px] object-cover object-center group-hover:scale-105 transition-transform duration-700 brightness-90"
                   loading="lazy"
+                  onError={(e) => handleImageFallback(e)}
                 />
 
                 {/* Dark Vignette Overlay */}

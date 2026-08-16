@@ -2,6 +2,7 @@ import React from 'react';
 import { Scissors, Sparkles, Droplet, Star, User, Flame } from 'lucide-react';
 import { FEATURED_SERVICES } from '../data/barbershopData';
 import { ServiceItem } from '../types';
+import { handleImageFallback } from '../utils/imageHelper';
 
 interface ServicesSectionProps {
   onSelectService: (serviceName: string) => void;
@@ -70,6 +71,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                   referrerPolicy="no-referrer"
+                  onError={(e) => handleImageFallback(e)}
                 />
                 
                 {/* Floating Icon Pill */}

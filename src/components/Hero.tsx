@@ -1,6 +1,7 @@
 import React from 'react';
 import { Calendar, Star } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/barbershopData';
+import { getSafeImageUrl, handleImageFallback } from '../utils/imageHelper';
 
 interface HeroProps {
   onOpenBookingModal?: () => void;
@@ -63,23 +64,27 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal }) => {
               <div className="flex -space-x-3 overflow-hidden">
                 <img
                   className="inline-block h-10 w-10 rounded-full ring-2 ring-[#0F1115] object-cover"
-                  src="/images/tevreden-klant-herenkapper-amsterdam.webp"
+                  src={getSafeImageUrl("tevreden-klant-herenkapper-amsterdam.webp")}
                   alt="Customer avatar"
+                  onError={(e) => handleImageFallback(e)}
                 />
                 <img
                   className="inline-block h-10 w-10 rounded-full ring-2 ring-[#0F1115] object-cover"
-                  src="/images/kapper-advies-herenkapsel-amsterdam-centrum.webp"
+                  src={getSafeImageUrl("kapper-advies-herenkapsel-amsterdam-centrum.webp")}
                   alt="Customer avatar"
+                  onError={(e) => handleImageFallback(e)}
                 />
                 <img
                   className="inline-block h-10 w-10 rounded-full ring-2 ring-[#0F1115] object-cover"
-                  src="/images/nek-schoonmaken-nekborstel-barber-amsterdam.webp"
+                  src={getSafeImageUrl("nek-schoonmaken-nekborstel-barber-amsterdam.webp")}
                   alt="Customer avatar"
+                  onError={(e) => handleImageFallback(e)}
                 />
                 <img
                   className="inline-block h-10 w-10 rounded-full ring-2 ring-[#0F1115] object-cover"
-                  src="/images/jeugd-kapper-low-fade-amsterdam.webp"
+                  src={getSafeImageUrl("jeugd-kapper-low-fade-amsterdam.webp")}
                   alt="Customer avatar"
+                  onError={(e) => handleImageFallback(e)}
                 />
               </div>
 
@@ -108,10 +113,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal }) => {
               {/* Sharp Barber Portrait */}
               <div className="relative rounded-2xl overflow-hidden border border-[#262B35] bg-[#14171E] shadow-2xl group">
                 <img
-                  src="/images/herenkapper-ervaring-amsterdam-centrum.webp"
+                  src={getSafeImageUrl("herenkapper-ervaring-amsterdam-centrum.webp")}
                   alt="City Center Barbershop Amsterdam - Precision Haircut and Beard Styling"
                   className="w-full h-[420px] sm:h-[480px] lg:h-[520px] object-cover object-center transform group-hover:scale-105 transition-transform duration-700"
                   loading="eager"
+                  onError={(e) => handleImageFallback(e)}
                 />
                 
                 {/* Subtle soft vignette overlay at bottom */}

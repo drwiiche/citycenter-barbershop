@@ -1,38 +1,39 @@
 import React, { useState } from 'react';
 import { Scissors, Instagram, Eye, X } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/barbershopData';
+import { getSafeImageUrl, handleImageFallback } from '../utils/imageHelper';
 
 export const GallerySection: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const galleryItems = [
     {
-      url: '/images/trendy-herenkapsel-burst-fade-amsterdam.webp',
+      url: getSafeImageUrl('trendy-herenkapsel-burst-fade-amsterdam.webp'),
       title: 'Trendy Burst Fade & Taper',
       category: 'Fade'
     },
     {
-      url: '/images/baard-lijnen-strak-maken-amsterdam.webp',
+      url: getSafeImageUrl('baard-lijnen-strak-maken-amsterdam.webp'),
       title: 'Hot Razor Beard Line Shaping',
       category: 'Beard'
     },
     {
-      url: '/images/krullend-haar-knippen-amsterdam-barber.webp',
+      url: getSafeImageUrl('krullend-haar-knippen-amsterdam-barber.webp'),
       title: 'Curly Hair Styling & Texture Cut',
       category: 'Styling'
     },
     {
-      url: '/images/heren-opscheren-fade-herenkapper-amsterdam.webp',
+      url: getSafeImageUrl('heren-opscheren-fade-herenkapper-amsterdam.webp'),
       title: 'Zero Skin Fade Artistry',
       category: 'Fade'
     },
     {
-      url: '/images/baard-trimmen-amsterdam-gold-clipper.webp',
+      url: getSafeImageUrl('baard-trimmen-amsterdam-gold-clipper.webp'),
       title: 'Gold Clipper Beard Trim',
       category: 'Grooming'
     },
     {
-      url: '/images/professionele-wahl-trimmer-barber-gerei.webp',
+      url: getSafeImageUrl('professionele-wahl-trimmer-barber-gerei.webp'),
       title: 'Artisan Equipment & Wahl Tools',
       category: 'Shop'
     }
@@ -78,6 +79,7 @@ export const GallerySection: React.FC = () => {
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 loading="lazy"
                 referrerPolicy="no-referrer"
+                onError={(e) => handleImageFallback(e)}
               />
               
               {/* Overlay on hover */}

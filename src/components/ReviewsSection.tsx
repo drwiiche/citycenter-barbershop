@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Star, Scissors, ChevronLeft, ChevronRight } from 'lucide-react';
 import { REVIEWS } from '../data/barbershopData';
+import { handleImageFallback } from '../utils/imageHelper';
 
 export const ReviewsSection: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -72,6 +73,7 @@ export const ReviewsSection: React.FC = () => {
                       className="w-12 h-12 rounded-full object-cover border-2 border-[#DAA520]/30 shadow-sm"
                       loading="lazy"
                       referrerPolicy="no-referrer"
+                      onError={(e) => handleImageFallback(e)}
                     />
 
                     {/* Gold 5 Stars */}

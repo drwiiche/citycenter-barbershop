@@ -2,6 +2,7 @@ import React from 'react';
 import { Scissors, Star, Calendar } from 'lucide-react';
 import { MASTER_BARBERS } from '../data/barbershopData';
 import { BarberItem } from '../types';
+import { handleImageFallback } from '../utils/imageHelper';
 
 interface BarbersSectionProps {
   onBookBarber?: (barberName: string) => void;
@@ -42,6 +43,7 @@ export const BarbersSection: React.FC<BarbersSectionProps> = ({ onBookBarber }) 
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                   referrerPolicy="no-referrer"
+                  onError={(e) => handleImageFallback(e)}
                 />
                 
                 {/* Floating badge */}

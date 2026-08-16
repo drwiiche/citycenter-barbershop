@@ -1,4 +1,5 @@
 import { ServiceItem, ReviewItem, BarberItem, FaqItem, BusinessHours } from '../types';
+import { getSafeImageUrl } from '../utils/imageHelper';
 
 export const BUSINESS_INFO = {
   name: "City Center Barbershop & Hair Salon",
@@ -17,9 +18,9 @@ export const BUSINESS_INFO = {
   googleRating: 4.9,
   reviewCount: 1343,
   walkInNote: "Walk-ins Welcome • No Reservation Required",
-  logoUrl: "/images/logo-2.webp",
-  heroImageUrl: "/images/herenkapper-ervaring-amsterdam-centrum.webp",
-  aboutImageUrl: "/images/herenkapper-aan-het-werk-amsterdam.webp",
+  logoUrl: getSafeImageUrl("logo-2.webp"),
+  heroImageUrl: getSafeImageUrl("herenkapper-ervaring-amsterdam-centrum.webp"),
+  aboutImageUrl: getSafeImageUrl("herenkapper-aan-het-werk-amsterdam.webp"),
   videoUrl: "/images/hair-cutting-at-city-center-barbershop-amsterdam.mp4",
   socials: {
     instagram: "https://www.instagram.com/citycenterbarbershop/",
@@ -40,7 +41,7 @@ export const FEATURED_SERVICES: ServiceItem[] = [
     price: '€30',
     duration: '30 min',
     description: 'Precision scissor & clipper cut, finished with razor neck clean & styling.',
-    image: '/images/heren-opscheren-fade-herenkapper-amsterdam.webp',
+    image: getSafeImageUrl('heren-opscheren-fade-herenkapper-amsterdam.webp'),
     icon: 'scissors',
     popular: true
   },
@@ -51,7 +52,7 @@ export const FEATURED_SERVICES: ServiceItem[] = [
     price: '€20',
     duration: '20 min',
     description: 'Sharp razor lines, clipper shaping, and nourishing botanical beard oil.',
-    image: '/images/baard-trimmen-amsterdam-gold-clipper.webp',
+    image: getSafeImageUrl('baard-trimmen-amsterdam-gold-clipper.webp'),
     icon: 'razor',
     popular: false
   },
@@ -62,7 +63,7 @@ export const FEATURED_SERVICES: ServiceItem[] = [
     price: '€30',
     duration: '30 min',
     description: 'Steaming herbal towels, rich lather, and straight razor precision.',
-    image: '/images/baardverzorging-olie-massage-amsterdam.webp',
+    image: getSafeImageUrl('baardverzorging-olie-massage-amsterdam.webp'),
     icon: 'towel',
     popular: false
   },
@@ -73,7 +74,7 @@ export const FEATURED_SERVICES: ServiceItem[] = [
     price: '€25',
     duration: '25 min',
     description: 'Patient, trendy haircuts and fades tailored for young gentlemen.',
-    image: '/images/jeugd-kapper-low-fade-amsterdam.webp',
+    image: getSafeImageUrl('jeugd-kapper-low-fade-amsterdam.webp'),
     icon: 'child',
     popular: false
   },
@@ -84,7 +85,7 @@ export const FEATURED_SERVICES: ServiceItem[] = [
     price: '€35',
     duration: '35 min',
     description: 'Custom razor lines, graphic edge details, and skin tapers.',
-    image: '/images/trendy-herenkapsel-burst-fade-amsterdam.webp',
+    image: getSafeImageUrl('trendy-herenkapsel-burst-fade-amsterdam.webp'),
     icon: 'star',
     popular: false
   },
@@ -95,7 +96,7 @@ export const FEATURED_SERVICES: ServiceItem[] = [
     price: '€15',
     duration: '20 min',
     description: 'Deep cleansing scalp wash with invigorating massage & conditioning mask.',
-    image: '/images/haar-masker-verzorging-washoek-amsterdam.webp',
+    image: getSafeImageUrl('haar-masker-verzorging-washoek-amsterdam.webp'),
     icon: 'droplet',
     popular: false
   }
@@ -111,7 +112,7 @@ export const ALL_SERVICES: ServiceItem[] = [
     price: '€45',
     duration: '50 min',
     description: 'Our top-requested package: Custom tailored haircut or skin fade paired with precision beard shaping and hot lather neck shave.',
-    image: '/images/baard-strak-maken-hals-trimmen-amsterdam.webp',
+    image: getSafeImageUrl('baard-strak-maken-hals-trimmen-amsterdam.webp'),
     popular: true,
     tag: 'Best Value'
   },
@@ -122,7 +123,7 @@ export const ALL_SERVICES: ServiceItem[] = [
     price: '€60+',
     duration: '60 min',
     description: 'Professional smoothing & strengthening treatment for sleek, healthy hair.',
-    image: '/images/keratine-behandeling-haar-stijlen-amsterdam.webp',
+    image: getSafeImageUrl('keratine-behandeling-haar-stijlen-amsterdam.webp'),
     popular: false,
     tag: 'Treatment'
   },
@@ -133,7 +134,7 @@ export const ALL_SERVICES: ServiceItem[] = [
     price: '€65+',
     duration: '75 min',
     description: 'Expert hair colouring, grey blending, and modern balayage highlights.',
-    image: '/images/dames-haar-kleuren-balayage-amsterdam.webp',
+    image: getSafeImageUrl('dames-haar-kleuren-balayage-amsterdam.webp'),
     popular: false
   },
   {
@@ -143,7 +144,7 @@ export const ALL_SERVICES: ServiceItem[] = [
     price: '€25',
     duration: '30 min',
     description: 'Salon blow-dry finish with premium thermal protection and volume boost.',
-    image: '/images/heren-haar-fohnen-styling-amsterdam.webp',
+    image: getSafeImageUrl('heren-haar-fohnen-styling-amsterdam.webp'),
     popular: false
   }
 ];
@@ -159,7 +160,7 @@ export const REVIEWS: ReviewItem[] = [
     date: '2 days ago',
     content: 'Hands down the best barbershop in Amsterdam Centraal! Perfect skin fade every time, no waiting around, and super friendly atmosphere.',
     verified: true,
-    avatar: '/images/tevreden-klant-herenkapper-amsterdam.webp'
+    avatar: getSafeImageUrl('tevreden-klant-herenkapper-amsterdam.webp')
   },
   {
     id: '2',
@@ -169,7 +170,7 @@ export const REVIEWS: ReviewItem[] = [
     date: '1 week ago',
     content: 'Razor-sharp beard lines and hot towel treatment. The barbers take their time and treat every customer like royalty.',
     verified: true,
-    avatar: '/images/kapper-advies-herenkapsel-amsterdam-centrum.webp'
+    avatar: getSafeImageUrl('kapper-advies-herenkapsel-amsterdam-centrum.webp')
   },
   {
     id: '3',
@@ -179,7 +180,7 @@ export const REVIEWS: ReviewItem[] = [
     date: '2 weeks ago',
     content: "Needed a fresh haircut before my meeting near Central Station. Walked straight in, chair was ready in 2 mins, and cut was absolute 10/10.",
     verified: true,
-    avatar: '/images/nek-schoonmaken-nekborstel-barber-amsterdam.webp'
+    avatar: getSafeImageUrl('nek-schoonmaken-nekborstel-barber-amsterdam.webp')
   },
   {
     id: '4',
@@ -189,7 +190,7 @@ export const REVIEWS: ReviewItem[] = [
     date: '3 weeks ago',
     content: 'Clean salon, sterile equipment, master barbers. 1,300+ 5-star reviews on Google speak for themselves!',
     verified: true,
-    avatar: '/images/tevreden-klant-herenkapper-amsterdam.webp'
+    avatar: getSafeImageUrl('tevreden-klant-herenkapper-amsterdam.webp')
   }
 ];
 
@@ -199,7 +200,7 @@ export const MASTER_BARBERS: BarberItem[] = [
     name: 'Ali & Team',
     title: 'Head Barber & Salon Director',
     experience: '12+ Years Exp.',
-    image: '/images/barber-3.webp',
+    image: getSafeImageUrl('barber-3.webp'),
     specialty: 'Skin Fades, Scissor Craft & Beard Sculpting'
   },
   {
@@ -207,7 +208,7 @@ export const MASTER_BARBERS: BarberItem[] = [
     name: 'Artisan Craftsman',
     title: 'Senior Master Barber',
     experience: '9+ Years Exp.',
-    image: '/images/herenkapper-aan-het-werk-amsterdam.webp',
+    image: getSafeImageUrl('herenkapper-aan-het-werk-amsterdam.webp'),
     specialty: 'Hot Razor Shaves & Modern Tapers'
   },
   {
@@ -215,7 +216,7 @@ export const MASTER_BARBERS: BarberItem[] = [
     name: 'Fade & Styling Specialist',
     title: 'Hair & Salon Specialist',
     experience: '8+ Years Exp.',
-    image: '/images/heren-fade-knippen-zijaanzicht-amsterdam.webp',
+    image: getSafeImageUrl('heren-fade-knippen-zijaanzicht-amsterdam.webp'),
     specialty: 'Burst Fades, Keratin & Curly Hair Design'
   }
 ];

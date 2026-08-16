@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Scissors, Shield, MapPin, Phone, Mail, Clock, Instagram, Facebook, Youtube, Send, Check } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/barbershopData';
+import { getSafeImageUrl, handleImageFallback } from '../utils/imageHelper';
 
 export const Footer: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -27,12 +28,10 @@ export const Footer: React.FC = () => {
             <a href="#" className="flex items-center gap-2.5 group">
               <div className="h-9 w-auto max-w-[120px] flex items-center justify-center">
                 <img 
-                  src="/images/logo-2.webp" 
+                  src={getSafeImageUrl("logo-2.webp")} 
                   alt="City Center Barbershop Amsterdam" 
                   className="h-8 w-auto object-contain brightness-110"
-                  onError={(e) => {
-                    (e.target as HTMLElement).style.display = 'none';
-                  }}
+                  onError={(e) => handleImageFallback(e)}
                 />
               </div>
               <div className="flex flex-col">

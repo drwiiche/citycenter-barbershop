@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Phone, MapPin, Menu, X, Scissors, Calendar, Shield, Crown, ChevronDown, Instagram, Facebook, Youtube } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/barbershopData';
+import { getSafeImageUrl, handleImageFallback } from '../utils/imageHelper';
 
 interface HeaderProps {
   onOpenBookingModal?: (serviceName?: string) => void;
@@ -111,12 +112,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBookingModal, onOpenServic
           <a href="#" className="flex items-center gap-3 group" id="nav-brand-logo">
             <div className="h-11 w-auto max-w-[140px] flex items-center justify-center">
               <img 
-                src="/images/logo-2.webp" 
+                src={getSafeImageUrl("logo-2.webp")} 
                 alt="City Center Barbershop Amsterdam" 
                 className="h-10 w-auto object-contain brightness-110 drop-shadow-[0_2px_10px_rgba(218,165,32,0.3)]"
-                onError={(e) => {
-                  (e.target as HTMLElement).style.display = 'none';
-                }}
+                onError={(e) => handleImageFallback(e)}
               />
             </div>
             <div className="flex flex-col">
